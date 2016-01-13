@@ -158,7 +158,23 @@ var Pages = React.createClass({
 var Contact = React.createClass({
     render: function() {
         return (
-            <div><h1>Contact</h1></div>
+            <div className="contactPage">
+                <div className="page padding-bottom">
+                    <div className="content_wrap">
+                        <Contacts />
+                        <div className="right-panel">
+                            <ContactPanel />
+                            <div className="clear"></div>
+                            <LinkPanel />
+                            <div className="clear"></div>
+                            <SearchPanel />
+                            <div className="clear"></div>
+                        </div>
+                        <div className="clear"></div>
+                    </div>
+                    <div className="clear"></div>
+                </div>
+            </div>
         )
     }
 });
