@@ -134,7 +134,23 @@ var Work = React.createClass({
 var Pages = React.createClass({
     render: function() {
         return (
-            <div><h1>Pages</h1></div>
+            <div className="pagesPage">
+                <div className="page padding-bottom">
+                    <div className="content_wrap">
+                        <PagesText />
+                        <div className="right-panel">
+                            <ContactPanel />
+                            <div className="clear"></div>
+                            <LinkPanel />
+                            <div className="clear"></div>
+                            <SearchPanel />
+                            <div className="clear"></div>
+                        </div>
+                        <div className="clear"></div>
+                    </div>
+                    <div className="clear"></div>
+                </div>
+            </div>
         )
     }
 });
