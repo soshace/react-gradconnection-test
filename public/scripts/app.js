@@ -118,7 +118,15 @@ var Services = React.createClass({
 var Work = React.createClass({
     render: function() {
         return (
-            <div><h1>Work</h1></div>
+            <div className="workPage">
+                <div className="page padding-bottom">
+                    <div className="content_wrap">
+                        <Portfolio />
+                        <div className="clear"></div>
+                    </div>
+                    <div className="clear"></div>
+                </div>
+            </div>
         )
     }
 });
