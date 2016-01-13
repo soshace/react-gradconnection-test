@@ -44,8 +44,24 @@ var SiteMenu = React.createClass({
 var Index = React.createClass({
     render: function() {
         return (
-            <div className="homePgae">
+            <div className="homePage">
                 <Carousel />
+                <Persons />
+                <div className="page padding-bottom">
+                    <div className="content_wrap">
+                        <News />
+                        <div className="right-panel">
+                            <ContactPanel />
+                            <div className="clear"></div>
+                            <LinkPanel />
+                            <div className="clear"></div>
+                            <SearchPanel />
+                            <div className="clear"></div>
+                        </div>
+                        <div className="clear"></div>
+                    </div>
+                    <div className="clear"></div>
+                </div>
             </div>
         )
     }
