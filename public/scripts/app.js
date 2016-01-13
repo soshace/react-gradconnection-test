@@ -94,7 +94,23 @@ var About = React.createClass({
 var Services = React.createClass({
     render: function() {
         return (
-            <div><h1>Services</h1></div>
+            <div className="servicesPage">
+                <div className="page padding-bottom">
+                    <div className="content_wrap">
+                        <ServicesText />
+                        <div className="right-panel">
+                            <ContactPanel />
+                            <div className="clear"></div>
+                            <LinkPanel />
+                            <div className="clear"></div>
+                            <SearchPanel />
+                            <div className="clear"></div>
+                        </div>
+                        <div className="clear"></div>
+                    </div>
+                    <div className="clear"></div>
+                </div>
+            </div>
         )
     }
 });
