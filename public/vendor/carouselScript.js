@@ -13,11 +13,13 @@
 	var delay = 3;
 	var sliderSelector = "#slides";
 	var effect = 2;
-	 
+
+window.carousel = function() {
+
 	jQuery(document).ready(function() {
  			speed *= 1000;			
 			delay *= 1000;
-			var run = setInterval('rotate()', delay);   
+			var run = setInterval(rotate, delay);
 			
 			 
 			//grab the width and calculate left value
@@ -88,14 +90,16 @@
 					clearInterval(run);
 				}, 
 				function() {
-					run = setInterval('rotate()', delay);   
+					run = setInterval(rotate, delay);
 				}
-			); 
-				 
+			);
+
+			//a simple function to click next link
+			//a timer will  this function, and the rotation will begin :)
+			function rotate() {
+				jQuery('body #next').click();
+			};
+
 		});
-		 
-		//a simple function to click next link
-		//a timer will  this function, and the rotation will begin :)  
-		function rotate() {
-			jQuery('#next').click();
-		}
+
+	}
