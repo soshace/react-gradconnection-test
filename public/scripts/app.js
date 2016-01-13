@@ -70,7 +70,23 @@ var Index = React.createClass({
 var About = React.createClass({
     render: function() {
         return (
-            <div><h1>About</h1></div>
+            <div className="aboutPage">
+                <div className="page padding-bottom">
+                    <div className="content_wrap">
+                        <AboutText />
+                        <div className="right-panel">
+                            <ContactPanel />
+                            <div className="clear"></div>
+                            <LinkPanel />
+                            <div className="clear"></div>
+                            <SearchPanel />
+                            <div className="clear"></div>
+                        </div>
+                        <div className="clear"></div>
+                    </div>
+                    <div className="clear"></div>
+                </div>
+            </div>
         )
     }
 });
