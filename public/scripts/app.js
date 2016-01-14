@@ -51,14 +51,7 @@
                     <div className="page padding-bottom">
                         <div className="content_wrap">
                             <News />
-                            <div className="right-panel">
-                                <ContactPanel />
-                                <div className="clear"></div>
-                                <LinkPanel />
-                                <div className="clear"></div>
-                                <SearchPanel />
-                                <div className="clear"></div>
-                            </div>
+                            <MainContentRightPanel />
                             <div className="clear"></div>
                         </div>
                         <div className="clear"></div>
@@ -75,14 +68,7 @@
                     <div className="page padding-bottom">
                         <div className="content_wrap">
                             <AboutText />
-                            <div className="right-panel">
-                                <ContactPanel />
-                                <div className="clear"></div>
-                                <LinkPanel />
-                                <div className="clear"></div>
-                                <SearchPanel />
-                                <div className="clear"></div>
-                            </div>
+                            <MainContentRightPanel />
                             <div className="clear"></div>
                         </div>
                         <div className="clear"></div>
@@ -99,14 +85,7 @@
                     <div className="page padding-bottom">
                         <div className="content_wrap">
                             <ServicesText />
-                            <div className="right-panel">
-                                <ContactPanel />
-                                <div className="clear"></div>
-                                <LinkPanel />
-                                <div className="clear"></div>
-                                <SearchPanel />
-                                <div className="clear"></div>
-                            </div>
+                            <MainContentRightPanel />
                             <div className="clear"></div>
                         </div>
                         <div className="clear"></div>
@@ -139,14 +118,7 @@
                     <div className="page padding-bottom">
                         <div className="content_wrap">
                             <PagesText />
-                            <div className="right-panel">
-                                <ContactPanel />
-                                <div className="clear"></div>
-                                <LinkPanel />
-                                <div className="clear"></div>
-                                <SearchPanel />
-                                <div className="clear"></div>
-                            </div>
+                            <MainContentRightPanel />
                             <div className="clear"></div>
                         </div>
                         <div className="clear"></div>
@@ -163,18 +135,26 @@
                     <div className="page padding-bottom">
                         <div className="content_wrap">
                             <Contacts />
-                            <div className="right-panel">
-                                <ContactPanel />
-                                <div className="clear"></div>
-                                <LinkPanel />
-                                <div className="clear"></div>
-                                <SearchPanel />
-                                <div className="clear"></div>
-                            </div>
+                            <MainContentRightPanel />
                             <div className="clear"></div>
                         </div>
                         <div className="clear"></div>
                     </div>
+                </div>
+            )
+        }
+    });
+
+    var MainContentRightPanel = React.createClass({
+        render: function() {
+            return (
+                <div className="right-panel">
+                    <ContactPanel />
+                    <div className="clear"></div>
+                    <LinkPanel />
+                    <div className="clear"></div>
+                    <SearchPanel />
+                    <div className="clear"></div>
                 </div>
             )
         }
