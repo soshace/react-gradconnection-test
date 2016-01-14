@@ -1,4 +1,6 @@
-window.ContactForm = React.createClass({
+import React from 'react';
+
+export default React.createClass({
     getInitialState: function() {
         return {name: '', email: '', message: ''};
     },
@@ -79,84 +81,6 @@ window.ContactForm = React.createClass({
                     </div>
                     <div className="clear"></div>
                 </div>
-            </div>
-        )
-    }
-});
-
-window.ContactPanel = React.createClass({
-    contactUrl: "http://localhost:3000/api/contacts", // hardcoded for test purposes since used another server for backend
-    handleContactSubmit: function(contactApplication) {
-        $.ajax({
-            url: this.contactUrl,
-            dataType: 'json',
-            type: 'POST',
-            data: contactApplication,
-            success: function() {
-                // Since there is no success message design mockup console.log() and alert() were used
-                console.log('Contact application was successfully sent');
-                alert('Contact application was successfully sent');
-            }.bind(this),
-            error: function(xhr, status, err) {
-                // Since there is no error message design mockup console.warn() and alert() were used
-                console.error(this.contactUrl, status, err.toString());
-                alert('Error was occurred while sending contact application');
-            }.bind(this)
-        });
-    },
-    render: function() {
-        return (
-            <div className="contact-panel">
-                <div className="title">
-                    <h1>PROIN A RISUS</h1>
-                    <h2>Vestibulum suscipit nib</h2>
-                </div>
-                <ContactForm onContactSubmit={this.handleContactSubmit}/>
-                <div className="clear"></div>
-            </div>
-        )
-    }
-});
-
-window.LinkPanel = React.createClass({
-    render: function() {
-        return (
-            <div className="panel martop">
-                <div className="title">
-                    <h1>DUIS AT LACUS</h1>
-                    <h2>Sed sagittis mi scelerisque</h2>
-                </div>
-                <div className="content">
-                    <ul>
-                        <li><a href="#">Posuere justo velitet laotinoc us</a></li>
-                        <li><a href="#">Donec egestas diam sed odiotio</a></li>
-                        <li><a href="#">Integer eu nibh vitae massa kun</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet, con</a></li>
-                    </ul>
-                </div>
-                <div className="clear"></div>
-            </div>
-        )
-    }
-});
-
-window.SearchPanel = React.createClass({
-    render: function() {
-        return (
-            <div className="contact-panel padding-bottm">
-                <div className="title">
-                    <h1>ALIQUAM ADIPIS</h1>
-                    <h2>Suspendisse ut urna enim</h2>
-                </div>
-                <div className="search">
-                    <ul>
-                        <li className="libg">
-                            <input type="text" className="search-filed" value="search here..."/>
-                        </li>
-                        <li><img src="images/search-bt.jpg" alt="" /></li>
-                    </ul>
-                </div>
-                <div className="clear"></div>
             </div>
         )
     }
