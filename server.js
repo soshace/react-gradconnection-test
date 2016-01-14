@@ -2,9 +2,12 @@ var fs         = require('fs'),
     path       = require('path'),
     express    = require('express'),
     bodyParser = require('body-parser'),
+    cors       = require('cors'),
     app        = express();
 
 var CONTACTS_FILE = path.join(__dirname, 'contacts.json');
+
+app.use(cors());
 
 app.set('port', 3000);
 
