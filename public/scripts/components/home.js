@@ -179,13 +179,13 @@ window.ContactPanel = React.createClass({
                 <div className="form">
                     <ul>
                         <li>
-                            <input type="text" className="text-field" value="your name here"/>
+                            <input type="text" className="text-field" placeholder="your name here" value=""/>
                         </li>
                         <li>
-                            <input name="" type="text"  className="text-field" value="your email  here"/>
+                            <input type="text" className="text-field" placeholder="your email here" value=""/>
                         </li>
                         <li>
-                            <textarea name="" cols="" rows="" className="textarea">your message  here</textarea>
+                            <textarea cols="" rows="" className="textarea" placeholder="your message here" />
                         </li>
                     </ul>
                     <div className="clear"></div>

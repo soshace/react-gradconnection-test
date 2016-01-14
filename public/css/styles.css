@@ -118,6 +118,10 @@ RIGHT-PANEL CLASSES
 .contact-panel .buttons:hover{ background:#91a3c2; line-height:30px;}
 .contact-panel .buttons a{ text-decoration:none; color:#9cff00;}
 .contact-panel .buttons a:hover{color:#1c263c;}
+.contact-panel ::-webkit-input-placeholder {color:#fff;}
+.contact-panel ::-moz-placeholder          {color:#fff;}/* Firefox 19+ */
+.contact-panel :-moz-placeholder           {color:#fff;}/* Firefox 18- */
+.contact-panel :-ms-input-placeholder      {color:#fff;}
 .search{ border-bottom:none; margin-top:20px}
 .search ul li{list-style:none; float:left; border:none;display:block;}
 .libg{background:#91a3c2; width:180px; text-indent:5px;}
