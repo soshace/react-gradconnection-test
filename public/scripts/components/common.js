@@ -93,10 +93,14 @@ window.ContactPanel = React.createClass({
             type: 'POST',
             data: contactApplication,
             success: function() {
+                // Since there is no success message design mockup console.log() and alert() were used
                 console.log('Contact application was successfully sent');
+                alert('Contact application was successfully sent');
             }.bind(this),
             error: function(xhr, status, err) {
+                // Since there is no error message design mockup console.warn() and alert() were used
                 console.error(this.contactUrl, status, err.toString());
+                alert('Error was occurred while sending contact application');
             }.bind(this)
         });
     },
