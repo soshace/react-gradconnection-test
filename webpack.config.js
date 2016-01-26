@@ -11,6 +11,12 @@ module.exports = {
 
     devtool: "source-map",
 
+    watch: true,
+
+    watchOptions: {
+        aggregateTimeout: 100
+    },
+
     module: {
         loaders: [
             {
