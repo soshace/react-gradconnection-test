@@ -3,8 +3,8 @@ import ContactPanel from './contact-panel';
 import LinkPanel from './link-panel';
 import SearchPanel from './search-panel';
 
-export default React.createClass({
-    render: function() {
+export default class extends React.Component {
+    render() {
         return (
             <div className="right-panel">
                 <ContactPanel />
@@ -16,4 +16,4 @@ export default React.createClass({
             </div>
         )
     }
-});
+};

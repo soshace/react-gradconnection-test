@@ -1,10 +1,11 @@
 import React from 'react';
 
-export default React.createClass({
-    componentDidMount: function() {
+export default class extends React.Component {
+    componentDidMount() {
         window.carousel();
-    },
-    render: function() {
+    }
+
+    render() {
         return (
             <div className="banner-wrapper">
                 <div className="row">
@@ -44,4 +45,4 @@ export default React.createClass({
             </div>
         )
     }
-});
+};

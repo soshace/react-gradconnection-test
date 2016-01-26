@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default React.createClass({
-    render: function() {
+export default class extends React.Component {
+    render() {
         return (
             <div className="left-panel">
                 <div className="panel">
@@ -44,4 +44,4 @@ export default React.createClass({
             </div>
         )
     }
-});
+};

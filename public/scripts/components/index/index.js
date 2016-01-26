@@ -4,8 +4,8 @@ import News from './news';
 import Persons from './persons';
 import MainContentRightPanel from '../common/right-panel';
 
-export default React.createClass({
-    render: function () {
+export default class extends React.Component {
+    render() {
         return (
             <div className="homePage">
                 <Carousel />
@@ -21,4 +21,4 @@ export default React.createClass({
             </div>
         )
     }
-});
+};

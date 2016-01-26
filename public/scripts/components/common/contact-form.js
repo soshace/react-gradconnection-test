@@ -1,19 +1,34 @@
 import React from 'react';
 
-export default React.createClass({
-    getInitialState: function() {
-        return {name: '', email: '', message: ''};
-    },
-    handleNameChange: function(event) {
+export default class extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            name: '',
+            email: '',
+            message: ''
+        };
+
+        this.handleNameChange = this.handleNameChange.bind(this);
+        this.handleEmailChange = this.handleEmailChange.bind(this);
+        this.handleMessageChange = this.handleMessageChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleNameChange(event) {
         this.setState({name: event.target.value});
-    },
-    handleEmailChange: function(event) {
+    }
+
+    handleEmailChange(event) {
         this.setState({email: event.target.value});
-    },
-    handleMessageChange: function(event) {
+    }
+
+    handleMessageChange(event) {
         this.setState({message: event.target.value});
-    },
-    handleSubmit: function(event) {
+    }
+
+    handleSubmit(event) {
         event.preventDefault();
         var name    = this.state.name.trim(),
             email   = this.state.email.trim(),
@@ -34,12 +49,14 @@ export default React.createClass({
 
         this.props.onContactSubmit({name: name, email: email, message: message});
         this.setState({name: '', email: '', message: ''})
-    },
-    validateEmail: function (email) {
+    }
+
+    validateEmail(email) {
         var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(email);
-    },
-    render: function() {
+    }
+
+    render() {
         return (
             <div>
                 <div className="form">
@@ -84,4 +101,4 @@ export default React.createClass({
             </div>
         )
     }
-});
+};

@@ -1,8 +1,8 @@
 import React from 'react';
 import Portfolio from './portfolio';
 
-export default React.createClass({
-    render: function () {
+export default class extends React.Component {
+    render() {
         return (
             <div className="workPage">
                 <div className="page padding-bottom">
@@ -15,4 +15,4 @@ export default React.createClass({
             </div>
         )
     }
-});
+};

@@ -2,8 +2,8 @@ import React from 'react';
 import AboutText from './about-text';
 import MainContentRightPanel from '../common/right-panel';
 
-export default React.createClass({
-    render: function () {
+export default class extends React.Component {
+    render() {
         return (
             <div className="aboutPage">
                 <div className="page padding-bottom">
@@ -17,4 +17,4 @@ export default React.createClass({
             </div>
         )
     }
-});
+};

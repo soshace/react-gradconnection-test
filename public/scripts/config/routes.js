@@ -11,7 +11,7 @@ import Work from '../components/work/work';
 import Pages from '../components/pages/pages';
 import Contact from '../components/contact/contact';
 
-module.exports = (
+export default (
     <Router>
         <Redirect from="/" to="index"/>
         <Route path="/" component={App}>
