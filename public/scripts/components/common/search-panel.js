@@ -11,7 +11,7 @@ export default React.createClass({
                 <div className="search">
                     <ul>
                         <li className="libg">
-                            <input type="text" className="search-filed" value="search here..."/>
+                            <input type="text" className="search-filed" placeholder="search here..."/>
                         </li>
                         <li><img src="images/search-bt.jpg" alt="" /></li>
                     </ul>
