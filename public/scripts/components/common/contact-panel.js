@@ -31,6 +31,18 @@ class ContactPanel extends React.Component {
         });
     }
 
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.contactFormEvents.status === 'success') {
+            // Since there is no success message design mockup console.log() and alert() were used
+            console.log('!! Contact application was successfully sent');
+            alert('Contact application was successfully sent');
+        } else if (nextProps.contactFormEvents.status === 'fail') {
+            // Since there is no error message design mockup console.warn() and alert() were used
+            console.error(error);
+            alert('Error was occurred while sending contact application');
+        }
+    }
+
     render() {
         return (
             <div className="contact-panel">
