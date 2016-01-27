@@ -94,7 +94,12 @@ class ContactForm extends React.Component {
                 </div>
                 <div className="controller">
                     <div className="buttons">
-                        <h2><a href="#" onClick={this.handleSubmit}>SUBMIT</a></h2>
+                        <h2>
+                            <a href="#" onClick={this.handleSubmit}>
+                                {!this.props.contactFormEvents.isFetching && <p>SUBMIT</p>}
+                                {this.props.contactFormEvents.isFetching && <p>SENDING</p>}
+                            </a>
+                        </h2>
                     </div>
                     <div className="clear"></div>
                 </div>
