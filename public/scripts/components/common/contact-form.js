@@ -7,12 +7,6 @@ class ContactForm extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            name: '',
-            email: '',
-            message: ''
-        };
-
         this.handleNameChange = this.handleNameChange.bind(this);
         this.handleEmailChange = this.handleEmailChange.bind(this);
         this.handleMessageChange = this.handleMessageChange.bind(this);
@@ -20,22 +14,22 @@ class ContactForm extends React.Component {
     }
 
     handleNameChange(event) {
-        this.setState({name: event.target.value});
+        this.props.changeName(event.target.value);
     }
 
     handleEmailChange(event) {
-        this.setState({email: event.target.value});
+        this.props.changeEmail(event.target.value);
     }
 
     handleMessageChange(event) {
-        this.setState({message: event.target.value});
+        this.props.changeMessage(event.target.value);
     }
 
     handleSubmit(event) {
         event.preventDefault();
-        var name    = this.state.name.trim(),
-            email   = this.state.email.trim(),
-            message = this.state.message.trim();
+        var name    = this.props.contactFormFieldsEvents.name.trim(),
+            email   = this.props.contactFormFieldsEvents.email.trim(),
+            message = this.props.contactFormFieldsEvents.message.trim();
 
         if (!name || !email || !message) {
             // Since there is no error message design mockup console.warn() and alert() were used
@@ -51,7 +45,10 @@ class ContactForm extends React.Component {
         }
 
         this.props.onContactSubmit({name: name, email: email, message: message});
-        this.setState({name: '', email: '', message: ''})
+
+        this.props.changeName('');
+        this.props.changeEmail('');
+        this.props.changeMessage('');
     }
 
     validateEmail(email) {
@@ -69,7 +66,7 @@ class ContactForm extends React.Component {
                                 type="text"
                                 className="text-field"
                                 placeholder="your name here"
-                                value={this.state.name}
+                                value={this.props.contactFormFieldsEvents.name}
                                 onChange={this.handleNameChange}
                             />
                         </li>
@@ -78,7 +75,7 @@ class ContactForm extends React.Component {
                                 type="text"
                                 className="text-field"
                                 placeholder="your email here"
-                                value={this.state.email}
+                                value={this.props.contactFormFieldsEvents.email}
                                 onChange={this.handleEmailChange}
                             />
                         </li>
@@ -88,7 +85,7 @@ class ContactForm extends React.Component {
                                 rows=""
                                 className="textarea"
                                 placeholder="your message here"
-                                value={this.state.message}
+                                value={this.props.contactFormFieldsEvents.message}
                                 onChange={this.handleMessageChange}
                             />
                         </li>
