@@ -2,8 +2,9 @@
 
 import React from 'react';
 import ContactForm from './contact-form';
+import { connect } from 'react-redux';
 
-export default class extends React.Component {
+class ContactPanel extends React.Component {
     constructor(props) {
         super(props);
 
@@ -44,4 +45,23 @@ export default class extends React.Component {
             </div>
         )
     }
-};
+}
+
+function mapStateToProps(state) {
+    return {
+        contactFormEvents: {
+            isFetching: state.contactFormEvents.isFetching,
+            status: state.contactFormEvents.status
+        }
+    };
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        sendContact: () => { (dispatch({ type: 'SEND_CONTACT' })) },
+        sendContactFail: () => { (dispatch({ type: 'SEND_CONTACT_FAIL' })) },
+        sendContactSuccess: () => { (dispatch({ type: 'SEND_CONTACT_SUCCESS' })) }
+    };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ContactPanel);

@@ -1,6 +1,9 @@
-import React from 'react';
+'use strict';
 
-export default class extends React.Component {
+import React from 'react';
+import { connect } from 'react-redux';
+
+class ContactForm extends React.Component {
     constructor(props) {
         super(props);
 
@@ -101,4 +104,28 @@ export default class extends React.Component {
             </div>
         )
     }
-};
+}
+
+function mapStateToProps(state) {
+    return {
+        contactFormFieldsEvents: {
+            name: state.contactFormFieldsEvents.name,
+            email: state.contactFormFieldsEvents.email,
+            message: state.contactFormFieldsEvents.message
+        },
+        contactFormEvents: {
+            isFetching: state.contactFormEvents.isFetching,
+            status: state.contactFormEvents.status
+        }
+    };
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        changeName: (name) => { (dispatch({ type: 'CHANGE_NAME', name })) },
+        changeEmail: (email) => { (dispatch({ type: 'CHANGE_EMAIL', email })) },
+        changeMessage: (message) => { (dispatch({ type: 'CHANGE_MESSAGE', message })) }
+    };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ContactForm);
