@@ -4,20 +4,21 @@
   "description": "Simple test application based on Reactjs for GradConnection",
   "main": "server.js",
   "dependencies": {
-    "path": "*",
-    "webpack": "*",
-    "react": "*",
-    "react-dom": "*",
-    "react-router": "*",
-    "babel-loader": "*",
-    "babel-core": "*",
-    "babel-preset-es2015": "*",
-    "babel-preset-react": "*",
-    "history": "*",
-
+    "babel-core": "^6.4.5",
+    "babel-loader": "^6.2.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
     "body-parser": "^1.4.3",
+    "cors": "^2.7.1",
     "express": "^4.4.5",
-    "cors" : "*"
-  },
-  "devDependencies": {}
+    "history": "^2.0.0-rc2",
+    "path": "^0.12.7",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "react-redux": "^4.0.6",
+    "react-router": "^2.0.0-rc5",
+    "redux": "^3.0.6",
+    "redux-logger": "^2.4.0",
+    "webpack": "^1.12.12"
+  }
 }
