@@ -1,4 +1,22 @@
+import React from 'react';
 import ReactDom from 'react-dom';
-import Routes from'./config/routes';
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import { Router, Route, browserHistory } from 'react-router';
+import { Provider } from 'react-redux';
+import createLogger from 'redux-logger';
+import routes from'./config/routes';
+import reducers from './reducers';
 
-ReactDom.render(Routes, document.getElementById('react-container'));
+const loggerMiddleware = createLogger();
+
+const createStoreWithMiddleware = applyMiddleware(
+    loggerMiddleware
+)(createStore);
+
+const store = createStoreWithMiddleware(reducers);
+
+ReactDom.render(
+    <Provider store={store}>
+        {routes}
+    </Provider>,
+    document.getElementById('react-container'));
