@@ -8,8 +8,7 @@ class ContactPanel extends React.Component {
     constructor(props) {
         super(props);
 
-        // hardcoded for test purposes since used another server for backend
-        this.contactUrl = "http://localhost:3000/api/contacts";
+        this.contactUrl = "/api/contacts";
 
         this.handleContactSubmit = this.handleContactSubmit.bind(this);
     }
