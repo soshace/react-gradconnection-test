@@ -9,12 +9,12 @@ node server.js
 ```
 
 After that server will be started and all new contact applications will be saved in `contacts.json` file.
-This server listens for `3000` port.
+This server listens for `3000` port. Port should not be busy.
 
-Then it is needed to create `bundle.js` via webpack.
+Then it is needed to create `bundle.js` via webpack. Globally installed `webpack` may be used.
 
 ```sh
 webpack
 ```
 
-Then please open public/index.html file by browser using web server (on localhost) or by using Firefox directly.
+Finally please open http://localhost:3000/ on your local machine.

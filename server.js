@@ -15,6 +15,10 @@ app.use('/', express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+app.get("/", function(req, res) {
+    res.sendFile(__dirname + 'public/index.html')
+});
+
 app.post('/api/contacts', function(req, res) {
     fs.readFile(CONTACTS_FILE, function(err, data) {
         if (err) {
