@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactRouter from 'react-router';
-import { Router } from 'react-router';
-import { Route } from 'react-router';
-import { Redirect } from 'react-router';
+import { Router, Route, Redirect, browserHistory } from 'react-router';
 import App from '../components/app';
 import Index from '../components/index/index';
 import About from '../components/about/about';
@@ -12,7 +10,7 @@ import Pages from '../components/pages/pages';
 import Contact from '../components/contact/contact';
 
 export default (
-    <Router>
+    <Router history={browserHistory}>
         <Redirect from="/" to="index"/>
         <Route path="/" component={App}>
             <Route path="index"    component={Index} />
@@ -23,4 +21,4 @@ export default (
             <Route path="contact"  component={Contact}/>
         </Route>
     </Router>
-);
+)
