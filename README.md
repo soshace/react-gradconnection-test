@@ -20,3 +20,5 @@ webpack
 Finally please open http://localhost:3000/ on your local machine.
 
 Was applied ES6 (without ES6+/ES7 experimental features) syntax.
+
+Network for professionals [Soshace](https://soshace.com)
